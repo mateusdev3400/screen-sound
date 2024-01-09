@@ -105,19 +105,19 @@ class ControllerBand
         {
             double averageBand = listBand[nameBand].Average();
             Console.WriteLine($"\nResposta: A banda {nameBand} tem média {averageBand}");
+            setup.RedirectionByKey();
         }
         else if (!listBand.ContainsKey(nameBand))
         {
             Console.Write($"\nResposta: A banda {nameBand} ainda não foi adicionada! ");
             Thread.Sleep(2000);
-            Console.Clear();
             ControllerShowAverageBand();
         }
         else 
         {
             Console.WriteLine($"\nResposta: A banda {nameBand} não possui notas para calcular a média!");
+            Thread.Sleep(2000);
+            ControllerShowAverageBand();
         }
-
-        setup.RedirectionByKey();
     }    
 }

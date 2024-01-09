@@ -56,16 +56,14 @@ class Setup
 
     public void ShowMessageOptionDefault()
     {
-        Console.WriteLine("Opção inválida, tente outra");
+        Console.Write("Opção inválida, tente outra ");
         Thread.Sleep(1000);
-        Console.Clear();
         SetupInitial();
     }
 
     public void DefaultRedirection()
     {
         Thread.Sleep(2000);
-        Console.Clear();
         SetupInitial();
     }
 
@@ -73,7 +71,7 @@ class Setup
     {
         Console.Write("\nDigite a tecla espaço para voltar ao menu inicial: ");
         Console.ReadKey();
-        Console.Clear();
+        Thread.Sleep(2000);
         SetupInitial();
     }
 
